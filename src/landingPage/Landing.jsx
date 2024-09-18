@@ -15,9 +15,8 @@ const Landing = () => {
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-start">
+    <div className="relative h-screen flex items-center justify-start w-100% ">
       {isConfettiVisible && <Confetti />}
-      
       <img
         src={backgroundImage}
         alt="Background"

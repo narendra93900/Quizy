@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Limg from "../assets/Limg.png";
 
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -11,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get("/db.js");
+      const response = await axios.get(`http://localhost:5000/user`);
       const validUser = response.data.users.find(
         (user) => user.username === username && user.password === password
       );
@@ -34,7 +35,7 @@ const Login = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-<div className="absolute top-0 right-0 p-4  bg-opacity-60 rounded-bl-lg ">
+{/* <div className="absolute top-0 right-0 p-4  bg-opacity-60 rounded-bl-lg ">
         <div className="text-5xl font-semibold text-slate-50 ">Welcome</div>
         <div className="text-lg font-semibold text-slate-50  ">
           Join Our Little Platfrom to Sharp Your Mind
@@ -47,7 +48,7 @@ const Login = () => {
         >
           Register
         </button>
-      </div>
+      </div> */}
 
       <div className="flex flex-1 items-center justify-center p-8">
         <div className="relative w-full max-w-md p-8">
@@ -77,20 +78,20 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-center">
               <button
                 type="submit"
                 className="px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700"
               >
                 Submit
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="px-4 py-2 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-700"
                 onClick={() => navigate("/admin")}
               >
                 Admin
-              </button>
+              </button> */}
             </div>
           </form>
         </div>
