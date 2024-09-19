@@ -1,15 +1,33 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Confetti from 'react-confetti';
+import axios from 'axios';
 
 // Sample quiz data
 const QuizDetails = () => {
   const [userAnswers, setUserAnswers] = useState({});
   const [results, setResults] = useState(null);
   const [showConfetti, setShowConfetti] = useState(false);
-  const location = useLocation();
-  const quizDetails = location.state?.quizDetails;
+  const [quizDetails, setQuizDetails] = useState();
+  
+  const {id} = useParams();
+  
 
+  useEffect(()=> {
+    fetchQuizDetails(id)
+  },[])
+
+  const fetchQuizDetails = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:5000/quiz/${id}`);
+      if(response.data){
+        setQuizDetails(response.data)
+        setUserAnswers(new Array(response.data.questions.length).fill(null))
+      }
+    } catch (error) {
+      alert("failed to fetch quiz details")
+    }
+  }
   const handleOptionChange = (questionIndex, option) => {
     setUserAnswers(prev => ({
       ...prev,
@@ -41,6 +59,14 @@ const QuizDetails = () => {
   if (!quizDetails) return <div>Quiz not found.</div>;
 
   return (
+    <div className="flex p-6">
+    {/* Left Side */}
+    <div className="h-screen min-w-72 flex flex-col items-start border-r-2">
+      <img src="" alt="User Avatar" className="mb-4 w-24 h-24 rounded-full" />
+      <p className="text-lg font-semibold">Username:</p>
+      <p className="text-md mb-2">Password</p>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded">Edit</button>
+    </div>
     <div className="p-6">
       {showConfetti && <Confetti />}
       <h1 className="text-2xl font-bold mb-4">{quizDetails.title}</h1>
@@ -77,6 +103,7 @@ const QuizDetails = () => {
           <p>Wrong Answers: {results.wrong}</p>
         </div>
       )}
+    </div>
     </div>
   );
 };

@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Limg from "../../assets/Limg.png"
-import Register from "../register/Register";
-
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,24 +12,21 @@ const Login = () => {
     try {
       const response = await axios.get(`http://localhost:5000/user`);
       // console.log(response);
-      
+
       const validUser = response.data.find(
         (user) => user.username === username && user.password === password
       );
       if (validUser) {
-        await localStorage.setItem("userId",validUser.id)
-        await localStorage.setItem("isAdmin",validUser.isAdmin)
+        await localStorage.setItem("userId", validUser.id);
+        await localStorage.setItem("isAdmin", validUser.isAdmin);
         // alert("Login Successful!");
-
-        if(validUser.isAdmin){
-          navigate("/admin-dashboard")
-        }else{
-
-          navigate('/dashboard')
+        if (validUser.isAdmin) {
+          navigate("/dashboard");
+        } else {
+          navigate("/dashboard");
         }
       } else {
         alert("Incorrect Username or Password");
-        
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -47,7 +41,7 @@ const Login = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-{/* <div className="absolute top-0 right-0 p-4  bg-opacity-60 rounded-bl-lg ">
+      {/* <div className="absolute top-0 right-0 p-4  bg-opacity-60 rounded-bl-lg ">
         <div className="text-5xl font-semibold text-slate-50 ">Welcome</div>
         <div className="text-lg font-semibold text-slate-50  ">
           Join Our Little Platfrom to Sharp Your Mind

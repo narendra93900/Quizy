@@ -8,6 +8,7 @@ import CreateQuiz from './pages/createQuiz/CreateQuiz';
 import AdminDashboard from './pages/dashboard/AdminDashboard';
 import UserDashboard from './pages/dashboard/UserDashboard';
 import QuizDetails from './pages/createQuiz/QuizDetails';
+import AllQuizzes from './pages/createQuiz/AllQuizzes';
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
         <Route path="/register" element={<Register/>}/>
         <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/createquiz" element={<CreateQuiz/>}/>
+        <Route path="/createquiz/:language" element={<CreateQuiz/>}/>
         <Route path="/userdashboard" element={<UserDashboard/>}/>
-        <Route path="/quizdetails" element={<QuizDetails/>}/>
+        <Route path="/quizzes/:language" element={<AllQuizzes/>}/>
+        <Route path="/quizdetails/:id" element={<QuizDetails/>}/>
         
       </Routes>
     </Router>

@@ -1,7 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import {useState } from "react";
+import {languages} from "../../utils/constants"
+import { useParams } from "react-router-dom";
 
 const CreateQuiz = () => {
+  const {language} = useParams()
   const [questions, setQuestions] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newQuestion, setNewQuestion] = useState("");
@@ -52,6 +55,7 @@ const CreateQuiz = () => {
     try {
       const response = await axios.post("http://localhost:5000/quiz", {
         title: quizTitle,
+        language: language,
         questions,
       });
       console.log(response.data);
@@ -70,6 +74,7 @@ const CreateQuiz = () => {
         onChange={(e) => setQuizTitle(e.target.value)}
         className="mb-4 p-2 border border-gray-300 rounded"
       />
+      <p>quiz language: {language}</p>
       <div className="flex">
         <button
           onClick={handleAddQuestion}

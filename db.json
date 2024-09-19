@@ -33,26 +33,27 @@
   ],
   "quiz": [
     {
-      "id": "b9e3",
-      "title": "Example Quiz",
+      "id": "1eab",
+      "title": "werwer",
+      "language": "python",
       "questions": [
         {
-          "question": "hello world",
+          "question": "werewre",
           "options": [
             {
-              "text": "QWER",
+              "text": "1",
               "isAnswer": false
             },
             {
-              "text": "QWERT",
+              "text": "2",
               "isAnswer": false
             },
             {
-              "text": "WERTYx",
+              "text": "3",
               "isAnswer": false
             },
             {
-              "text": "WERTY",
+              "text": "4",
               "isAnswer": true
             }
           ]
@@ -60,27 +61,56 @@
       ]
     },
     {
-      "id": "22ec",
-      "title": "Quiz ",
+      "id": "422d",
+      "title": "js quiz",
+      "language": "javascript",
       "questions": [
         {
-          "question": "what is your fav lang",
+          "question": "js",
           "options": [
             {
-              "text": "html",
+              "text": "1",
               "isAnswer": false
             },
             {
-              "text": "css",
+              "text": "2",
               "isAnswer": false
             },
             {
-              "text": "javascript",
+              "text": "3",
               "isAnswer": false
             },
             {
-              "text": "react",
+              "text": "4",
               "isAnswer": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1865",
+      "title": "p2",
+      "language": "python",
+      "questions": [
+        {
+          "question": "p2",
+          "options": [
+            {
+              "text": "1",
+              "isAnswer": false
+            },
+            {
+              "text": "2",
+              "isAnswer": true
+            },
+            {
+              "text": "3",
+              "isAnswer": false
+            },
+            {
+              "text": "4",
+              "isAnswer": false
             }
           ]
         }
