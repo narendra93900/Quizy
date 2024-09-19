@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Limg from "../assets/Limg.png";
+import Limg from "../../assets/Limg.png"
+import Register from "../register/Register";
 
 
 const Login = () => {
@@ -13,14 +14,25 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.get(`http://localhost:5000/user`);
-      const validUser = response.data.users.find(
+      // console.log(response);
+      
+      const validUser = response.data.find(
         (user) => user.username === username && user.password === password
       );
       if (validUser) {
-        alert("Login Successful!");
+        await localStorage.setItem("userId",validUser.id)
+        await localStorage.setItem("isAdmin",validUser.isAdmin)
+        // alert("Login Successful!");
+
+        if(validUser.isAdmin){
+          navigate("/admin-dashboard")
+        }else{
+
+          navigate('/dashboard')
+        }
       } else {
         alert("Incorrect Username or Password");
-        navigate("/register");
+        
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -30,7 +42,7 @@ const Login = () => {
   return (
     <div className="relative min-h-screen flex">
       <img
-        src={Limg}
+        src={"../../assets/Limg.png"}
         alt="background"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -95,20 +107,6 @@ const Login = () => {
             </div>
           </form>
         </div>
-      </div>
-
-      <div className="flex-1 flex flex-col justify-center items-end p-8">
-        <div className="text-5xl font-semibold text-slate-50">Welcome</div>
-        <div className="text-lg font-semibold text-slate-50">
-          Join Our Little Platform to Sharpen Your Mind
-        </div>
-        <button
-          type="button"
-          className="mt-4 px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700"
-          onClick={() => navigate("/register")}
-        >
-          Register
-        </button>
       </div>
     </div>
   );

@@ -1,12 +1,90 @@
 {
   "user": [
     {
+      "id": "1",
       "username": "Narendra",
-      "password": "pass@123"
+      "password": "pass@123",
+      "isAdmin": false
     },
     {
+      "id": "2",
       "username": "Ashok",
-      "password": "word@123"
+      "password": "word@123",
+      "isAdmin": false
+    },
+    {
+      "id": "7270",
+      "username": "Ram",
+      "password": "Ram@123",
+      "isAdmin": false
+    },
+    {
+      "id": "1327",
+      "username": "teja",
+      "password": "1234",
+      "isAdmin": false
+    },
+    {
+      "id": "1328",
+      "username": "admin",
+      "password": "admin",
+      "isAdmin": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": "b9e3",
+      "title": "Example Quiz",
+      "questions": [
+        {
+          "question": "hello world",
+          "options": [
+            {
+              "text": "QWER",
+              "isAnswer": false
+            },
+            {
+              "text": "QWERT",
+              "isAnswer": false
+            },
+            {
+              "text": "WERTYx",
+              "isAnswer": false
+            },
+            {
+              "text": "WERTY",
+              "isAnswer": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22ec",
+      "title": "Quiz ",
+      "questions": [
+        {
+          "question": "what is your fav lang",
+          "options": [
+            {
+              "text": "html",
+              "isAnswer": false
+            },
+            {
+              "text": "css",
+              "isAnswer": false
+            },
+            {
+              "text": "javascript",
+              "isAnswer": false
+            },
+            {
+              "text": "react",
+              "isAnswer": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

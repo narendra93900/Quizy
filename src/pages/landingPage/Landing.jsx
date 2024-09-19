@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Confetti from 'react-confetti';
-import backgroundImage from '../assets/backgroundImage.png';
+import backgroundImage from '../../assets/backgroundImage.png';
+
 
 const Landing = () => {
   const [isConfettiVisible, setConfettiVisible] = useState(false);
