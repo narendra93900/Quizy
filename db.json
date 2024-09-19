@@ -1,22 +1,22 @@
 {
   "user": [
     {
-      "id": "1",
-      "username": "Narendra",
-      "password": "pass@123",
-      "isAdmin": false
+      "username": "ksaii",
+      "password": "123456",
+      "isAdmin": false,
+      "id": "1"
     },
     {
-      "id": "2",
       "username": "Ashok",
       "password": "word@123",
+      "id": "2",
       "isAdmin": false
     },
     {
-      "id": "7270",
-      "username": "Ram",
-      "password": "Ram@123",
-      "isAdmin": false
+      "username": "Rambabu",
+      "password": "9876",
+      "isAdmin": false,
+      "id": "7270"
     },
     {
       "id": "1327",
@@ -115,6 +115,258 @@
           ]
         }
       ]
+    },
+    {
+      "id": "d2f7",
+      "title": "Ex",
+      "language": "python",
+      "questions": [
+        {
+          "question": "p5",
+          "options": [
+            {
+              "text": "7",
+              "isAnswer": false
+            },
+            {
+              "text": "6",
+              "isAnswer": false
+            },
+            {
+              "text": "8",
+              "isAnswer": false
+            },
+            {
+              "text": "9",
+              "isAnswer": true
+            }
+          ]
+        },
+        {
+          "question": "p8",
+          "options": [
+            {
+              "text": "2",
+              "isAnswer": false
+            },
+            {
+              "text": "5",
+              "isAnswer": true
+            },
+            {
+              "text": "7",
+              "isAnswer": false
+            },
+            {
+              "text": "9",
+              "isAnswer": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fbf4",
+      "title": "Easy Python",
+      "language": "python",
+      "questions": [
+        {
+          "question": "q1",
+          "options": [
+            {
+              "text": "1",
+              "isAnswer": true
+            },
+            {
+              "text": "3",
+              "isAnswer": false
+            },
+            {
+              "text": "6",
+              "isAnswer": false
+            },
+            {
+              "text": "7",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Q2",
+          "options": [
+            {
+              "text": "5",
+              "isAnswer": false
+            },
+            {
+              "text": "6",
+              "isAnswer": false
+            },
+            {
+              "text": "9",
+              "isAnswer": false
+            },
+            {
+              "text": "4",
+              "isAnswer": true
+            }
+          ]
+        },
+        {
+          "question": "Q3",
+          "options": [
+            {
+              "text": "5",
+              "isAnswer": false
+            },
+            {
+              "text": "9",
+              "isAnswer": true
+            },
+            {
+              "text": "4",
+              "isAnswer": false
+            },
+            {
+              "text": "7",
+              "isAnswer": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "quizParticipants": [
+    {
+      "id": "1eab",
+      "participants": [
+        {
+          "userId": "2",
+          "userName": "Ashok"
+        },
+        {
+          "userId": "1",
+          "userName": "ksaii"
+        },
+        {
+          "userId": "7270",
+          "userName": "Rambabu"
+        }
+      ]
+    },
+    {
+      "id": "1865",
+      "participants": [
+        {
+          "userId": "7270",
+          "userName": "Ram"
+        }
+      ]
+    },
+    {
+      "id": "fbf4",
+      "participants": [
+        {
+          "userId": "7270",
+          "userName": "Ram"
+        },
+        {
+          "userId": "1327",
+          "userName": "teja"
+        }
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "ba70",
+      "quizId": "1eab",
+      "userId": "2",
+      "answers": {
+        "werewre": "4"
+      }
+    },
+    {
+      "id": "f45d",
+      "quizId": "1eab",
+      "userId": "1",
+      "answers": {
+        "werewre": "3"
+      }
+    },
+    {
+      "id": "f895",
+      "quizId": "1865",
+      "userId": "7270",
+      "answers": {
+        "p2": "2"
+      }
+    },
+    {
+      "id": "3cdb",
+      "quizId": "fbf4",
+      "userId": "7270",
+      "answers": {
+        "q1": "3",
+        "Q2": "9",
+        "Q3": "9"
+      }
+    },
+    {
+      "id": "f557",
+      "quizId": "1eab",
+      "userId": "7270",
+      "answers": {
+        "werewre": "3"
+      }
+    },
+    {
+      "id": "4d51",
+      "quizId": "fbf4",
+      "userId": "1327",
+      "answers": {
+        "q1": "7",
+        "Q2": "4",
+        "Q3": "7"
+      }
+    }
+  ],
+  "score": [
+    {
+      "id": "25a0",
+      "userId": "2",
+      "quizId": "1eab",
+      "score": 100
+    },
+    {
+      "id": "6e86",
+      "userId": "1",
+      "quizId": "1eab",
+      "score": 0
+    },
+    {
+      "id": "b923",
+      "userId": "7270",
+      "quizId": "1865",
+      "score": 100
+    },
+    {
+      "id": "a7d7",
+      "userId": "7270",
+      "quizId": "fbf4",
+      "score": 33
+    },
+    {
+      "id": "f0c2",
+      "userId": "7270",
+      "quizId": "1eab",
+      "score": 0
+    },
+    {
+      "id": "7361",
+      "userId": "1327",
+      "quizId": "fbf4",
+      "score": 33
     }
   ]
 }
