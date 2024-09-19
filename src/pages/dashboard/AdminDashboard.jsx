@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {languages} from "../../utils/constants";
+import SideBar from '../../components/SideBar';
+
 const AdminDashboard = () => {
     const navigate = useNavigate()
     const [quizes,setQuizes]=useState([])
+  
     useEffect(() => {
         fetchQuizs()
       
@@ -14,6 +17,8 @@ const AdminDashboard = () => {
        const response = await axios.get(`http://localhost:5000/quiz`)
         // console.log(response)
         setQuizes(response.data)
+        const userName = await localStorage.getItem('username');
+        setUsername(userName)
        
        } catch (error) {
         console.error(error);
@@ -22,16 +27,11 @@ const AdminDashboard = () => {
 
   return (
     <div className="flex justify-between p-6 gap-8">
-      {/* Left Side */}
-      <div className="h-screen min-w-72 flex flex-col items-start border-r-2">
-        <img src="" alt="User Avatar" className="mb-4 w-24 h-24 rounded-full" />
-        <p className="text-lg font-semibold">Username:</p>
-        <p className="text-md mb-2">Password</p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">Edit</button>
-      </div>
+     
+     <SideBar/>
 
       {/* Right Side */}
-      
+
         {/* {quizes && quizes.length? <div className="flex-col flex-1 p-10">
           <h1 className='text-4xl font-bold'>All Quizzes</h1>
             <div className="w-full h-full grid gap-8 grid-flow-col auto-cols-max mt-12">
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
         </div>} */}
         <div className="w-full">
         <h1 className='text-2xl font-bold'>All Lanuages</h1>
-        <div className="w-full h-full grid gap-8 grid-flow-col auto-cols-max mt-12">
+        <div className="w-full h-full grid gap-8 grid-cols-4  mt-12">
         {languages && languages.map((language)=> (
           <div key={language} onClick={()=> navigate(`/quizzes/${language.name}`)} className='flex-col gap-4 p-8 border-2 h-fit min-w-48 flex items-center justify-center text-white bg-indigo-500 shadow-lg rounded-md cursor-pointer transition-all ease-in-out delay-100 hover:bg-white hover:text-indigo-500 hover:border-indigo-500'>
             <language.icon size={48}/>

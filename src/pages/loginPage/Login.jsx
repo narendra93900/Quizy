@@ -19,6 +19,7 @@ const Login = () => {
       if (validUser) {
         await localStorage.setItem("userId", validUser.id);
         await localStorage.setItem("isAdmin", validUser.isAdmin);
+        await localStorage.setItem("username", validUser.username);
         // alert("Login Successful!");
         if (validUser.isAdmin) {
           navigate("/dashboard");
@@ -66,6 +67,7 @@ const Login = () => {
               </label>
               <input
                 type="text"
+                placeholder="Enter Your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
@@ -78,18 +80,26 @@ const Login = () => {
               </label>
               <input
                 type="password"
+                placeholder="Enter Your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
                 required
               />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-between">
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700"
+                className="text-white bg-indigo-500 px-4 py-2 rounded-md  transition duration-300 ease-in-out hover:bg-blue-600 hover:shadow-lg"
               >
                 Submit
+              </button>
+              <button
+                type="button"
+                className="text-white bg-indigo-500 px-4 py-2 rounded-md  transition duration-300 ease-in-out hover:bg-blue-600 hover:shadow-lg"
+                onClick={() => navigate("/register")}
+              >
+                Register
               </button>
               {/* <button
                 type="button"

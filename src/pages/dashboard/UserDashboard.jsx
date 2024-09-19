@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SideBar from "../../components/SideBar";
 
 const UserDashboard = () => {
   const navigate = useNavigate();
@@ -20,14 +21,7 @@ const UserDashboard = () => {
   return (
     <div className="flex justify-between p-6">
       {/* Left Side */}
-      <div className="flex flex-col items-start w-1/3">
-        <img src="" alt="User Avatar" className="mb-4 w-24 h-24 rounded-full" />
-        <p className="text-lg font-semibold">Username:</p>
-        <p className="text-md mb-2">Password</p>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">
-          Edit
-        </button>
-      </div>
+     <SideBar/>
 
       {/* Right Side: Cards */}
       {quizes.map((quiz, index) => (
