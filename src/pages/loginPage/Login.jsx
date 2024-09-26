@@ -11,8 +11,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.get(`http://localhost:5000/user`);
-      // console.log(response);
-
+      
       const validUser = response.data.find(
         (user) => user.username === username && user.password === password
       );
@@ -20,12 +19,8 @@ const Login = () => {
         await localStorage.setItem("userId", validUser.id);
         await localStorage.setItem("isAdmin", validUser.isAdmin);
         await localStorage.setItem("username", validUser.username);
-        // alert("Login Successful!");
-        if (validUser.isAdmin) {
-          navigate("/dashboard");
-        } else {
-          navigate("/dashboard");
-        }
+        
+        navigate(validUser.isAdmin ? "/dashboard" : "/dashboard");
       } else {
         alert("Incorrect Username or Password");
       }
@@ -35,82 +30,50 @@ const Login = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex">
-      <img
-        src={"../../assets/Limg.png"}
-        alt="background"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* <div className="absolute top-0 right-0 p-4  bg-opacity-60 rounded-bl-lg ">
-        <div className="text-5xl font-semibold text-slate-50 ">Welcome</div>
-        <div className="text-lg font-semibold text-slate-50  ">
-          Join Our Little Platfrom to Sharp Your Mind
-        </div>
-
-        <button
-          type="button"
-          className="px-4 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700"
-          onClick={() => navigate("/Register")}
-        >
-          Register
-        </button>
-      </div> */}
-
-      <div className="flex flex-1 items-center justify-center p-8">
-        <div className="relative w-full max-w-md p-8">
-          <h2 className="text-2xl font-bold text-center mb-6">LOGIN</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label className="block mb-2 text-sm font-medium text-gray-700">
-                Username
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Your username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label className="block mb-2 text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter Your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-                required
-              />
-            </div>
-            <div className="flex justify-between">
-              <button
-                type="submit"
-                className="text-white bg-indigo-500 px-4 py-2 rounded-md  transition duration-300 ease-in-out hover:bg-blue-600 hover:shadow-lg"
-              >
-                Submit
-              </button>
-              <button
-                type="button"
-                className="text-white bg-indigo-500 px-4 py-2 rounded-md  transition duration-300 ease-in-out hover:bg-blue-600 hover:shadow-lg"
-                onClick={() => navigate("/register")}
-              >
-                Register
-              </button>
-              {/* <button
-                type="button"
-                className="px-4 py-2 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-700"
-                onClick={() => navigate("/admin")}
-              >
-                Admin
-              </button> */}
-            </div>
-          </form>
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-700">LOGIN</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block mb-2 text-sm font-medium text-gray-600">Username</label>
+            <input
+              type="text"
+              placeholder="Enter Your username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block mb-2 text-sm font-medium text-gray-600">Password</label>
+            <input
+              type="password"
+              placeholder="Enter Your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              required
+            />
+          </div>
+          <div className="flex justify-between">
+            <button
+              type="submit"
+              className="w-full text-white bg-indigo-600 px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-indigo-700 hover:shadow-lg"
+            >
+              Submit
+            </button>
+          </div>
+          <div className="mt-4 text-center">
+            <button
+              type="button"
+              className="text-indigo-600 hover:underline"
+              onClick={() => navigate("/register")}
+            >
+              Don’t have an account? Register here
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 {
   "user": [
     {
-      "username": "ksaii",
-      "password": "123456",
+      "username": "ksaiii",
+      "password": "sai@123",
       "isAdmin": false,
       "id": "1"
     },
@@ -61,174 +61,328 @@
       ]
     },
     {
-      "id": "422d",
-      "title": "js quiz",
+      "id": "5ffc",
+      "title": "Easy-Python-Quiz",
+      "language": "python",
+      "questions": [
+        {
+          "question": "Which of the following is a valid way to define a function in Python?",
+          "options": [
+            {
+              "text": "def my_function[]:",
+              "isAnswer": false
+            },
+            {
+              "text": "function my_function():",
+              "isAnswer": false
+            },
+            {
+              "text": "def my_function():",
+              "isAnswer": true
+            },
+            {
+              "text": "my_function() = def",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What does the len() function do?",
+          "options": [
+            {
+              "text": "Returns the length of an object",
+              "isAnswer": true
+            },
+            {
+              "text": "Converts an object to a string",
+              "isAnswer": false
+            },
+            {
+              "text": " Checks if an object is empty",
+              "isAnswer": false
+            },
+            {
+              "text": "Returns the first element of an object",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What is the result of the following expression?5 == 5.0",
+          "options": [
+            {
+              "text": "True",
+              "isAnswer": true
+            },
+            {
+              "text": "False",
+              "isAnswer": false
+            },
+            {
+              "text": "None",
+              "isAnswer": false
+            },
+            {
+              "text": "Error",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Which of the following is used to create a comment in Python?",
+          "options": [
+            {
+              "text": "# This is a comment",
+              "isAnswer": true
+            },
+            {
+              "text": "// This is a comment",
+              "isAnswer": false
+            },
+            {
+              "text": "/* This is a comment */",
+              "isAnswer": false
+            },
+            {
+              "text": "-- This is a comment",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What will be the output of the following code? print(type([]) is list)",
+          "options": [
+            {
+              "text": "True",
+              "isAnswer": true
+            },
+            {
+              "text": "False",
+              "isAnswer": false
+            },
+            {
+              "text": "None",
+              "isAnswer": false
+            },
+            {
+              "text": "Error",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Which of the following is the correct way to open a file for reading in Python?",
+          "options": [
+            {
+              "text": "open('file.txt', 'r')",
+              "isAnswer": true
+            },
+            {
+              "text": "open('file.txt', 'write')",
+              "isAnswer": false
+            },
+            {
+              "text": "open('file.txt', 'read')",
+              "isAnswer": false
+            },
+            {
+              "text": "open('file.txt', 'open')",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What does the break statement do in a loop?",
+          "options": [
+            {
+              "text": " Stops the loop execution",
+              "isAnswer": true
+            },
+            {
+              "text": " Skips the current iteration",
+              "isAnswer": false
+            },
+            {
+              "text": "Continues to the next iteration",
+              "isAnswer": false
+            },
+            {
+              "text": "Exits the program",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What is the correct syntax for a while loop in Python?",
+          "options": [
+            {
+              "text": "while x < 10 {}",
+              "isAnswer": false
+            },
+            {
+              "text": "while (x < 10)",
+              "isAnswer": false
+            },
+            {
+              "text": "while x < 10:",
+              "isAnswer": true
+            },
+            {
+              "text": "while x < 10 do",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What is the output of the following code? print(bool([]))",
+          "options": [
+            {
+              "text": "True",
+              "isAnswer": false
+            },
+            {
+              "text": "False",
+              "isAnswer": true
+            },
+            {
+              "text": "None",
+              "isAnswer": false
+            },
+            {
+              "text": "Error",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Which keyword is used to define a class in Python?",
+          "options": [
+            {
+              "text": "class",
+              "isAnswer": true
+            },
+            {
+              "text": "def",
+              "isAnswer": false
+            },
+            {
+              "text": "object",
+              "isAnswer": false
+            },
+            {
+              "text": "type",
+              "isAnswer": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5d35",
+      "title": "Javascript",
       "language": "javascript",
       "questions": [
         {
-          "question": "js",
+          "question": "What is the output of the following code? console.log(typeof null);",
           "options": [
             {
-              "text": "1",
+              "text": "\"null\"",
               "isAnswer": false
             },
             {
-              "text": "2",
+              "text": "\"undefined\"",
               "isAnswer": false
             },
             {
-              "text": "3",
-              "isAnswer": false
-            },
-            {
-              "text": "4",
-              "isAnswer": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1865",
-      "title": "p2",
-      "language": "python",
-      "questions": [
-        {
-          "question": "p2",
-          "options": [
-            {
-              "text": "1",
-              "isAnswer": false
-            },
-            {
-              "text": "2",
+              "text": "\"object\"",
               "isAnswer": true
             },
             {
-              "text": "3",
-              "isAnswer": false
-            },
-            {
-              "text": "4",
-              "isAnswer": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d2f7",
-      "title": "Ex",
-      "language": "python",
-      "questions": [
-        {
-          "question": "p5",
-          "options": [
-            {
-              "text": "7",
-              "isAnswer": false
-            },
-            {
-              "text": "6",
-              "isAnswer": false
-            },
-            {
-              "text": "8",
-              "isAnswer": false
-            },
-            {
-              "text": "9",
-              "isAnswer": true
-            }
-          ]
-        },
-        {
-          "question": "p8",
-          "options": [
-            {
-              "text": "2",
-              "isAnswer": false
-            },
-            {
-              "text": "5",
-              "isAnswer": true
-            },
-            {
-              "text": "7",
-              "isAnswer": false
-            },
-            {
-              "text": "9",
-              "isAnswer": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fbf4",
-      "title": "Easy Python",
-      "language": "python",
-      "questions": [
-        {
-          "question": "q1",
-          "options": [
-            {
-              "text": "1",
-              "isAnswer": true
-            },
-            {
-              "text": "3",
-              "isAnswer": false
-            },
-            {
-              "text": "6",
-              "isAnswer": false
-            },
-            {
-              "text": "7",
+              "text": "\"number\"",
               "isAnswer": false
             }
           ]
         },
         {
-          "question": "Q2",
+          "question": "Which of the following is a valid way to create a function in JavaScript?",
           "options": [
             {
-              "text": "5",
+              "text": "function myFunc[] {}",
               "isAnswer": false
             },
             {
-              "text": "6",
+              "text": "function myFunc() {}",
+              "isAnswer": true
+            },
+            {
+              "text": "function myFunc() {}",
               "isAnswer": false
             },
             {
-              "text": "9",
+              "text": "myFunc = function() {}",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What will be the output of the following code? console.log(0.1 + 0.2 === 0.3);",
+          "options": [
+            {
+              "text": "true",
               "isAnswer": false
             },
             {
-              "text": "4",
+              "text": "false",
+              "isAnswer": true
+            },
+            {
+              "text": "undefined",
+              "isAnswer": false
+            },
+            {
+              "text": "Error",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "How do you declare a variable in JavaScript?",
+          "options": [
+            {
+              "text": "var x;",
+              "isAnswer": false
+            },
+            {
+              "text": "let x;",
+              "isAnswer": false
+            },
+            {
+              "text": "const x;",
+              "isAnswer": false
+            },
+            {
+              "text": "All of the above",
               "isAnswer": true
             }
           ]
         },
         {
-          "question": "Q3",
+          "question": "What does the === operator do in JavaScript?",
           "options": [
             {
-              "text": "5",
-              "isAnswer": false
-            },
-            {
-              "text": "9",
+              "text": " Compares two values for equality and type",
               "isAnswer": true
             },
             {
-              "text": "4",
+              "text": "Compares two values for equality only",
               "isAnswer": false
             },
             {
-              "text": "7",
+              "text": "Checks if two variables are the same object",
+              "isAnswer": false
+            },
+            {
+              "text": "Performs a bitwise comparison",
               "isAnswer": false
             }
           ]
@@ -269,6 +423,19 @@
         {
           "userId": "7270",
           "userName": "Ram"
+        },
+        {
+          "userId": "1327",
+          "userName": "teja"
+        }
+      ]
+    },
+    {
+      "id": "5d35",
+      "participants": [
+        {
+          "userId": "2",
+          "userName": "Ashok"
         },
         {
           "userId": "1327",
@@ -329,6 +496,30 @@
         "Q2": "4",
         "Q3": "7"
       }
+    },
+    {
+      "id": "ba88",
+      "quizId": "5d35",
+      "userId": "2",
+      "answers": {
+        "What is the output of the following code? console.log(typeof null);": "\"object\"",
+        "Which of the following is a valid way to create a function in JavaScript?": "function myFunc() {}",
+        "What will be the output of the following code? console.log(0.1 + 0.2 === 0.3);": "false",
+        "How do you declare a variable in JavaScript?": "let x;",
+        "What does the === operator do in JavaScript?": " Compares two values for equality and type"
+      }
+    },
+    {
+      "id": "7496",
+      "quizId": "5d35",
+      "userId": "1327",
+      "answers": {
+        "What is the output of the following code? console.log(typeof null);": "\"object\"",
+        "Which of the following is a valid way to create a function in JavaScript?": "myFunc = function() {}",
+        "What will be the output of the following code? console.log(0.1 + 0.2 === 0.3);": "Error",
+        "How do you declare a variable in JavaScript?": "All of the above",
+        "What does the === operator do in JavaScript?": "Compares two values for equality only"
+      }
     }
   ],
   "score": [
@@ -367,6 +558,18 @@
       "userId": "1327",
       "quizId": "fbf4",
       "score": 33
+    },
+    {
+      "id": "9aeb",
+      "userId": "2",
+      "quizId": "5d35",
+      "score": 80
+    },
+    {
+      "id": "fd63",
+      "userId": "1327",
+      "quizId": "5d35",
+      "score": 40
     }
   ]
 }

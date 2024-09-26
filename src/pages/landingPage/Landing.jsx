@@ -12,7 +12,7 @@ const Landing = () => {
     setConfettiVisible(true);
     setTimeout(() => {
       navigate('/login'); // Navigate to the login page after the confetti animation
-    }, 3000); // duration of the confetti animation
+    }, 3000); 
   };
 
   return (
@@ -30,7 +30,7 @@ const Landing = () => {
       <div className="relative z-20 text-white pl-12 max-w-md">
         <h1 className="text-5xl font-bold mb-6">Welcome to Quiz</h1>
         <p className="text-xl mb-8">
-          7 Little Changes That'll Make a Big Difference With Your Mental Health
+        Challenge Yourself and Friends Who Will Come Out on Top in This Quiz Battle?
         </p>
         <button
           onClick={handleGetStarted}

@@ -37,7 +37,7 @@ const SideBar = () => {
       await localStorage.setItem('username', newUsername);
       const isAdmin = JSON.parse(await localStorage.getItem("isAdmin"));
     //   alert(isAdmin)
-    //   await localStorage.setItem('password', newPassword); // Update password in local storage
+      // await localStorage.setItem('password', newPassword); // Update password in local storage
 
       // Update the username and password in the database
       const userId = await localStorage.getItem('userId'); // Assuming you have userId stored
