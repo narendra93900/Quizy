@@ -29,6 +29,12 @@
       "username": "admin",
       "password": "admin",
       "isAdmin": true
+    },
+    {
+      "id": "7e4a",
+      "username": "ramaya",
+      "password": "ramaya",
+      "isAdmin": false
     }
   ],
   "quiz": [
@@ -388,6 +394,118 @@
           ]
         }
       ]
+    },
+    {
+      "id": "46a0",
+      "title": "Level-1 Javascript",
+      "language": "javascript",
+      "questions": [
+        {
+          "question": "What is the correct syntax for referring to an external script called \"script.js\"?",
+          "options": [
+            {
+              "text": "<script src=\"script.js\">",
+              "isAnswer": true
+            },
+            {
+              "text": "<script href=\"script.js\">",
+              "isAnswer": false
+            },
+            {
+              "text": "<script name=\"script.js\">",
+              "isAnswer": false
+            },
+            {
+              "text": "<script link=\"script.js\">",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Which of the following is a valid variable name in JavaScript?",
+          "options": [
+            {
+              "text": "2ndVariable",
+              "isAnswer": false
+            },
+            {
+              "text": "second-variable",
+              "isAnswer": false
+            },
+            {
+              "text": "second_variable",
+              "isAnswer": true
+            },
+            {
+              "text": "second variable",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What is the output of typeof NaN?",
+          "options": [
+            {
+              "text": "\"number\"",
+              "isAnswer": true
+            },
+            {
+              "text": "\"NaN\"",
+              "isAnswer": false
+            },
+            {
+              "text": "\"undefined\"",
+              "isAnswer": false
+            },
+            {
+              "text": "\"object\"",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "Which operator is used to assign a value to a variable?",
+          "options": [
+            {
+              "text": "=",
+              "isAnswer": true
+            },
+            {
+              "text": "==",
+              "isAnswer": false
+            },
+            {
+              "text": "===",
+              "isAnswer": false
+            },
+            {
+              "text": "=>",
+              "isAnswer": false
+            }
+          ]
+        },
+        {
+          "question": "What does the push() method do in an array?",
+          "options": [
+            {
+              "text": "Adds a new element to the beginning",
+              "isAnswer": false
+            },
+            {
+              "text": " Adds a new element to the end",
+              "isAnswer": true
+            },
+            {
+              "text": "Removes the first element",
+              "isAnswer": false
+            },
+            {
+              "text": "Removes the last element",
+              "isAnswer": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "quizParticipants": [
@@ -405,6 +523,10 @@
         {
           "userId": "7270",
           "userName": "Rambabu"
+        },
+        {
+          "userId": "7e4a",
+          "userName": "ramaya"
         }
       ]
     },
@@ -440,6 +562,39 @@
         {
           "userId": "1327",
           "userName": "teja"
+        },
+        {
+          "userId": "7270",
+          "userName": "Rambabu"
+        },
+        {
+          "userId": "7e4a",
+          "userName": "ramaya"
+        }
+      ]
+    },
+    {
+      "id": "5ffc",
+      "participants": [
+        {
+          "userId": "2",
+          "userName": "Ashok"
+        },
+        {
+          "userId": "7270",
+          "userName": "Rambabu"
+        },
+        {
+          "userId": "1327",
+          "userName": "teja"
+        },
+        {
+          "userId": "1",
+          "userName": "ksaiii"
+        },
+        {
+          "userId": "7e4a",
+          "userName": "ramaya"
         }
       ]
     }
@@ -520,6 +675,123 @@
         "How do you declare a variable in JavaScript?": "All of the above",
         "What does the === operator do in JavaScript?": "Compares two values for equality only"
       }
+    },
+    {
+      "id": "823b",
+      "quizId": "5ffc",
+      "userId": "2",
+      "answers": {
+        "Which of the following is a valid way to define a function in Python?": null,
+        "What does the len() function do?": null,
+        "What is the result of the following expression?5 == 5.0": null,
+        "Which of the following is used to create a comment in Python?": null,
+        "What will be the output of the following code? print(type([]) is list)": null,
+        "Which of the following is the correct way to open a file for reading in Python?": null,
+        "What does the break statement do in a loop?": null,
+        "What is the correct syntax for a while loop in Python?": null,
+        "What is the output of the following code? print(bool([]))": null,
+        "Which keyword is used to define a class in Python?": null
+      }
+    },
+    {
+      "id": "b259",
+      "quizId": "5d35",
+      "userId": "7270",
+      "answers": {
+        "What is the output of the following code? console.log(typeof null);": null,
+        "Which of the following is a valid way to create a function in JavaScript?": null,
+        "What will be the output of the following code? console.log(0.1 + 0.2 === 0.3);": null,
+        "How do you declare a variable in JavaScript?": null,
+        "What does the === operator do in JavaScript?": null
+      }
+    },
+    {
+      "id": "0ee1",
+      "quizId": "5ffc",
+      "userId": "7270",
+      "answers": {
+        "Which of the following is a valid way to define a function in Python?": "function my_function():",
+        "What does the len() function do?": "Converts an object to a string",
+        "What is the result of the following expression?5 == 5.0": "False",
+        "Which of the following is used to create a comment in Python?": "// This is a comment",
+        "What will be the output of the following code? print(type([]) is list)": "True",
+        "Which of the following is the correct way to open a file for reading in Python?": "open('file.txt', 'read')",
+        "What does the break statement do in a loop?": " Skips the current iteration",
+        "What is the correct syntax for a while loop in Python?": "while x < 10:",
+        "What is the output of the following code? print(bool([]))": "False",
+        "Which keyword is used to define a class in Python?": "class"
+      }
+    },
+    {
+      "id": "8403",
+      "quizId": "5ffc",
+      "userId": "1327",
+      "answers": {
+        "Which of the following is a valid way to define a function in Python?": "function my_function():",
+        "What does the len() function do?": "Converts an object to a string",
+        "What is the result of the following expression?5 == 5.0": "None",
+        "Which of the following is used to create a comment in Python?": "// This is a comment",
+        "What will be the output of the following code? print(type([]) is list)": "None",
+        "Which of the following is the correct way to open a file for reading in Python?": "open('file.txt', 'read')",
+        "What does the break statement do in a loop?": " Stops the loop execution",
+        "What is the correct syntax for a while loop in Python?": "while (x < 10)",
+        "What is the output of the following code? print(bool([]))": "False",
+        "Which keyword is used to define a class in Python?": "def"
+      }
+    },
+    {
+      "id": "4413",
+      "quizId": "5ffc",
+      "userId": "1",
+      "answers": {
+        "Which of the following is a valid way to define a function in Python?": "function my_function():",
+        "What does the len() function do?": "Returns the length of an object",
+        "What is the result of the following expression?5 == 5.0": "False",
+        "Which of the following is used to create a comment in Python?": "// This is a comment",
+        "What will be the output of the following code? print(type([]) is list)": "None",
+        "Which of the following is the correct way to open a file for reading in Python?": "open('file.txt', 'r')",
+        "What does the break statement do in a loop?": "Continues to the next iteration",
+        "What is the correct syntax for a while loop in Python?": "while (x < 10)",
+        "What is the output of the following code? print(bool([]))": "None",
+        "Which keyword is used to define a class in Python?": "class"
+      }
+    },
+    {
+      "id": "f892",
+      "quizId": "1eab",
+      "userId": "7e4a",
+      "answers": {
+        "werewre": "2"
+      }
+    },
+    {
+      "id": "4530",
+      "quizId": "5ffc",
+      "userId": "7e4a",
+      "answers": {
+        "Which of the following is a valid way to define a function in Python?": "function my_function():",
+        "What does the len() function do?": "Converts an object to a string",
+        "What is the result of the following expression?5 == 5.0": "None",
+        "Which of the following is used to create a comment in Python?": "// This is a comment",
+        "What will be the output of the following code? print(type([]) is list)": "None",
+        "Which of the following is the correct way to open a file for reading in Python?": "open('file.txt', 'r')",
+        "What does the break statement do in a loop?": "Continues to the next iteration",
+        "What is the correct syntax for a while loop in Python?": "while (x < 10)",
+        "What is the output of the following code? print(bool([]))": "True",
+        "Which keyword is used to define a class in Python?": "class"
+      }
+    },
+    {
+      "id": "7ff4",
+      "quizId": "5d35",
+      "userId": "7e4a",
+      "answers": {
+        "What is the output of the following code? console.log(typeof null);": "\"undefined\"",
+        "Which of the following is a valid way to create a function in JavaScript?": "function myFunc() {}",
+        "What will be the output of the following code? console.log(0.1 + 0.2 === 0.3);": "true",
+        "How do you declare a variable in JavaScript?": "All of the above",
+        "What does the === operator do in JavaScript?": " Compares two values for equality and type"
+      }
     }
   ],
   "score": [
@@ -570,6 +842,54 @@
       "userId": "1327",
       "quizId": "5d35",
       "score": 40
+    },
+    {
+      "id": "e9be",
+      "userId": "2",
+      "quizId": "5ffc",
+      "score": 0
+    },
+    {
+      "id": "aecd",
+      "userId": "7270",
+      "quizId": "5d35",
+      "score": 0
+    },
+    {
+      "id": "17a9",
+      "userId": "7270",
+      "quizId": "5ffc",
+      "score": 40
+    },
+    {
+      "id": "6b4c",
+      "userId": "1327",
+      "quizId": "5ffc",
+      "score": 20
+    },
+    {
+      "id": "f835",
+      "userId": "1",
+      "quizId": "5ffc",
+      "score": 30
+    },
+    {
+      "id": "219e",
+      "userId": "7e4a",
+      "quizId": "1eab",
+      "score": 0
+    },
+    {
+      "id": "2f44",
+      "userId": "7e4a",
+      "quizId": "5ffc",
+      "score": 20
+    },
+    {
+      "id": "7871",
+      "userId": "7e4a",
+      "quizId": "5d35",
+      "score": 60
     }
   ]
 }

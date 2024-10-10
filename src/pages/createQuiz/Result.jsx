@@ -71,21 +71,39 @@ const Result = () => {
         <h1 className="text-3xl font-bold mb-6 text-gray-800">Quiz Participants</h1>
         <div className="overflow-y-auto max-h-[70vh]">
           {participantsWithScores.length > 0 ? (
-            participantsWithScores.map(participant => (
-              <div key={participant.userId} className="flex items-center justify-between border-b-2 border-gray-200 p-4 hover:bg-gray-50 transition duration-150 ease-in-out">
-                <p className="text-lg font-medium">{participant.userName}</p>
-                <p className="text-lg font-medium">Score: {participant.score}</p>
-                {participant.score === highestScore && (
-                  <span className="p-2 rounded bg-green-500 text-white">Winner</span>
-                )}
-                <button
-                  onClick={() => navigate(`/results/${quizId}/${participant.userId}`)}
-                  className="ml-4 flex items-center justify-center gap-2 border-2 border-indigo-500 px-4 py-2 rounded-md text-indigo-500 bg-white shadow transition duration-150 ease-in-out hover:bg-indigo-500 hover:text-white"
-                >
-                  <p>View answers</p>
-                </button>
-              </div>
-            ))
+            <table className="min-w-full border-collapse border border-gray-200">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border border-gray-200 p-4 text-left">Participant</th>
+                  <th className="border border-gray-200 p-4 text-left">Score</th>
+                  <th className="border border-gray-200 p-4 text-left">Winner</th>
+                  <th className="border border-gray-200 p-4 text-left">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                {participantsWithScores.map(participant => (
+                  <tr key={participant.userId} className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="border border-gray-200 p-4">{participant.userName}</td>
+                    <td className="border border-gray-200 p-4">{participant.score}</td>
+                    <td className="border border-gray-200 p-4">
+                      {participant.score === highestScore ? (
+                        <span className="p-2 rounded bg-green-500 text-white">Winner</span>
+                      ) : (
+                        <span className="text-gray-500">-</span>
+                      )}
+                    </td>
+                    <td className="border border-gray-200 p-4">
+                      <button
+                        onClick={() => navigate(`/results/${quizId}/${participant.userId}`)}
+                        className="flex items-center justify-center gap-2 border-2 border-indigo-500 px-4 py-2 rounded-md text-indigo-500 bg-white shadow transition duration-150 ease-in-out hover:bg-indigo-500 hover:text-white"
+                      >
+                        <p>View answers</p>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           ) : (
             <p className="text-gray-500 text-center p-4">No participants available.</p>
           )}
